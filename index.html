@@ -1,0 +1,51 @@
+<html>
+<head>
+  <title>Mini Project Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>📊 Mini Project Manager</h1>
+
+<div class="project-section">
+  <input type="text" id="projectName" placeholder="New Project Name">
+  <button onclick="addProject()">Add Project</button>
+</div>
+
+<div id="projectTabs"></div>
+
+<div class="task-form">
+  <input type="text" id="taskName" placeholder="Task Name">
+  <input type="text" id="username" placeholder="Assigned User">
+
+  <select id="status">
+    <option value="green">Done</option>
+    <option value="orange">In Progress</option>
+    <option value="red">Blocked</option>
+  </select>
+
+  <input type="date" id="startDate">
+  <input type="date" id="endDate">
+  <input type="text" id="comment" placeholder="Comment">
+
+  <button onclick="addTask()">Add Task</button>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Task</th>
+      <th>User</th>
+      <th>Status</th>
+      <th>Start</th>
+      <th>End</th>
+      <th>Comment</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody id="taskTable"></tbody>
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>

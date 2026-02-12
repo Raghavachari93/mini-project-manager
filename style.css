@@ -1,0 +1,62 @@
+body {
+  font-family: Arial;
+  background: #f4f6f8;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.project-section, .task-form {
+  margin-bottom: 20px;
+}
+
+input, select, button {
+  padding: 8px;
+  margin: 5px;
+}
+
+button {
+  cursor: pointer;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.status {
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: white;
+}
+
+.green { background: green; }
+.orange { background: orange; }
+.red { background: red; }
+
+.project-tab {
+  display: inline-block;
+  padding: 8px 15px;
+  background: #ddd;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.project-tab.active {
+  background: #007bff;
+  color: white;
+}
