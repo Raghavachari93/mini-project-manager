@@ -60,3 +60,10 @@ th, td {
   background: #007bff;
   color: white;
 }
+
+select.status {
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px;
+}

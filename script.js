@@ -65,10 +65,13 @@ function renderTasks() {
     row.innerHTML = `
       <td>${task.name}</td>
       <td>${task.user}</td>
-      <td><span class="status ${task.status}">
-        ${task.status === "green" ? "Done" :
-          task.status === "orange" ? "In Progress" : "Blocked"}
-      </span></td>
+      <td>
+        <select onchange="updateStatus(${index}, this.value)" class="status ${task.status}">
+          <option value="green" ${task.status === "green" ? "selected" : ""}>Done</option>
+          <option value="orange" ${task.status === "orange" ? "selected" : ""}>In Progress</option>
+          <option value="red" ${task.status === "red" ? "selected" : ""}>Blocked</option>
+        </select>
+      </td>
       <td>${task.start}</td>
       <td>${task.end}</td>
       <td>${task.comment}</td>
@@ -77,6 +80,12 @@ function renderTasks() {
       </td>
     `;
   });
+}
+
+function updateStatus(index, newStatus) {
+  projects[currentProject].tasks[index].status = newStatus;
+  saveData();
+  renderTasks();
 }
 
 function deleteTask(index) {
